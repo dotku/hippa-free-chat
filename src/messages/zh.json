@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "HIPAA 安全聊天",
+    "description": "AI驱动的HIPAA合规安全医疗通讯"
+  },
+  "nav": {
+    "home": "首页",
+    "chat": "聊天",
+    "login": "登录",
+    "logout": "退出",
+    "profile": "个人资料"
+  },
+  "home": {
+    "hero": "安全医疗聊天",
+    "subtitle": "与您的医疗提供者安全沟通。我们的AI实时监控每条消息，确保HIPAA合规——实时保护患者隐私。",
+    "cta": "开始聊天",
+    "feature1Title": "AI驱动的PHI检测",
+    "feature1Desc": "每条消息在发送前都会被AI扫描，检测受保护的健康信息（PHI），防止意外违反HIPAA。",
+    "feature2Title": "实时消息",
+    "feature2Desc": "患者与医疗提供者之间通过安全WebSocket连接进行即时通讯。",
+    "feature3Title": "审计追踪",
+    "feature3Desc": "所有被阻止的消息都会被记录，用于合规审计，确保完全透明和可追溯。"
+  },
+  "chat": {
+    "conversations": "对话",
+    "newConversation": "新建对话",
+    "searchUsers": "搜索用户...",
+    "typeMessage": "输入消息...",
+    "send": "发送",
+    "sending": "发送中...",
+    "scanning": "正在扫描HIPAA合规性...",
+    "noConversation": "选择一个对话开始聊天",
+    "contactProvider": "联系医疗提供者",
+    "noMessages": "暂无消息。开始对话吧！",
+    "blocked": "消息已阻止",
+    "blockedReason": "此消息被阻止，因为它可能包含受保护的健康信息（PHI）：",
+    "blockedCategories": "检测到的类别：",
+    "blockedTip": "提示：避免在聊天消息中包含患者姓名、社会安全号码、病历号或带有身份识别信息的具体诊断。",
+    "dismiss": "知道了",
+    "online": "在线",
+    "offline": "离线",
+    "patient": "患者",
+    "provider": "医疗提供者",
+    "startConversation": "开始对话",
+    "noUsers": "未找到用户",
+    "translate": "翻译",
+    "translating": "翻译中...",
+    "translated": "已翻译",
+    "typing": "输入中...",
+    "addProvider": "添加医疗提供者",
+    "participants": "参与者",
+    "providerAdded": "已添加医疗提供者",
+    "attach": "附加文件",
+    "fileTooLarge": "文件太大，最大10MB。"
+  },
+  "profile": {
+    "title": "个人资料",
+    "provider": "医疗提供者",
+    "patient": "患者",
+    "admin": "管理员",
+    "editName": "编辑姓名",
+    "save": "保存",
+    "saving": "保存中...",
+    "cancel": "取消",
+    "conversations": "对话数",
+    "messagesSent": "发送消息",
+    "blocked": "已阻止",
+    "accountInfo": "账户信息",
+    "email": "邮箱",
+    "role": "角色",
+    "memberSince": "注册时间"
+  },
+  "case": {
+    "title": "病例信息",
+    "country": "国家",
+    "gender": "性别",
+    "gender_male": "男",
+    "gender_female": "女",
+    "gender_other": "其他",
+    "ageRange": "年龄范围",
+    "problemDescription": "问题描述",
+    "xray": "X光片（可选）",
+    "upload": "上传X光片",
+    "uploading": "上传中...",
+    "saving": "保存中...",
+    "saved": "已保存"
+  },
+  "language": {
+    "en": "English",
+    "zh": "中文"
+  }
+}

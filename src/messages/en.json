@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "HIPAA Free Chat",
+    "description": "Secure healthcare messaging with AI-powered HIPAA compliance"
+  },
+  "nav": {
+    "home": "Home",
+    "chat": "Chat",
+    "login": "Sign In",
+    "logout": "Sign Out",
+    "profile": "Profile"
+  },
+  "home": {
+    "hero": "Secure Healthcare Chat",
+    "subtitle": "Connect with your health provider safely. Our AI monitors every message to ensure HIPAA compliance — protecting patient privacy in real-time.",
+    "cta": "Start Chatting",
+    "feature1Title": "AI-Powered PHI Detection",
+    "feature1Desc": "Every message is scanned by AI before sending to detect Protected Health Information and prevent accidental HIPAA violations.",
+    "feature2Title": "Real-Time Messaging",
+    "feature2Desc": "Instant communication between patients and healthcare providers with secure WebSocket connections.",
+    "feature3Title": "Audit Trail",
+    "feature3Desc": "All blocked messages are logged for compliance auditing, ensuring full transparency and accountability."
+  },
+  "chat": {
+    "conversations": "Conversations",
+    "newConversation": "New Conversation",
+    "searchUsers": "Search users...",
+    "typeMessage": "Type a message...",
+    "send": "Send",
+    "sending": "Sending...",
+    "scanning": "Scanning for HIPAA compliance...",
+    "noConversation": "Select a conversation to start chatting",
+    "contactProvider": "Contact a Provider",
+    "noMessages": "No messages yet. Start the conversation!",
+    "blocked": "Message Blocked",
+    "blockedReason": "This message was blocked because it may contain Protected Health Information (PHI):",
+    "blockedCategories": "Detected categories:",
+    "blockedTip": "Tip: Avoid including patient names, SSNs, medical record numbers, or specific diagnoses with identifying information in chat messages.",
+    "dismiss": "Understood",
+    "online": "Online",
+    "offline": "Offline",
+    "patient": "Patient",
+    "provider": "Provider",
+    "startConversation": "Start Conversation",
+    "noUsers": "No users found",
+    "translate": "Translate",
+    "translating": "Translating...",
+    "translated": "Translated",
+    "typing": "typing...",
+    "addProvider": "Add Provider",
+    "participants": "Participants",
+    "providerAdded": "Provider added",
+    "attach": "Attach file",
+    "fileTooLarge": "File too large. Maximum 10MB."
+  },
+  "profile": {
+    "title": "Profile",
+    "provider": "Provider",
+    "patient": "Patient",
+    "admin": "Admin",
+    "editName": "Edit name",
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "conversations": "Conversations",
+    "messagesSent": "Messages Sent",
+    "blocked": "Blocked",
+    "accountInfo": "Account Information",
+    "email": "Email",
+    "role": "Role",
+    "memberSince": "Member Since"
+  },
+  "case": {
+    "title": "Case Information",
+    "country": "Country",
+    "gender": "Gender",
+    "gender_male": "Male",
+    "gender_female": "Female",
+    "gender_other": "Other",
+    "ageRange": "Age Range",
+    "problemDescription": "Problem Description",
+    "xray": "X-Ray (Optional)",
+    "upload": "Upload X-Ray",
+    "uploading": "Uploading...",
+    "saving": "Saving...",
+    "saved": "Saved"
+  },
+  "language": {
+    "en": "English",
+    "zh": "中文"
+  }
+}

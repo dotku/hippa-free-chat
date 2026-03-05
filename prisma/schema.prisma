@@ -1,0 +1,93 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  PATIENT
+  PROVIDER
+  ADMIN
+}
+
+model User {
+  id              String                    @id @default(cuid())
+  auth0Id         String                    @unique
+  email           String                    @unique
+  name            String
+  role            Role                      @default(PATIENT)
+  avatar          String?
+  createdAt       DateTime                  @default(now())
+  conversations   ConversationParticipant[]
+  messages        Message[]
+  blockedMessages BlockedMessage[]
+  cases           Case[]
+}
+
+model Conversation {
+  id           String                    @id @default(cuid())
+  name         String?
+  createdAt    DateTime                  @default(now())
+  updatedAt    DateTime                  @updatedAt
+  participants ConversationParticipant[]
+  messages     Message[]
+  case         Case?
+}
+
+model ConversationParticipant {
+  id             String       @id @default(cuid())
+  userId         String
+  conversationId String
+  user           User         @relation(fields: [userId], references: [id])
+  conversation   Conversation @relation(fields: [conversationId], references: [id])
+  joinedAt       DateTime     @default(now())
+
+  @@unique([userId, conversationId])
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  content        String
+  attachmentUrl  String?
+  attachmentName String?
+  attachmentType String?
+  senderId       String
+  conversationId String
+  sender         User         @relation(fields: [senderId], references: [id])
+  conversation   Conversation @relation(fields: [conversationId], references: [id])
+  createdAt      DateTime     @default(now())
+
+  @@index([conversationId, createdAt])
+}
+
+model Case {
+  id                 String       @id @default(cuid())
+  caseNumber         Int          @unique @default(autoincrement())
+  country            String?
+  gender             String?
+  ageRange           String?
+  problemDescription String?
+  xrayUrl            String?
+  patientId          String
+  conversationId     String       @unique
+  patient            User         @relation(fields: [patientId], references: [id])
+  conversation       Conversation @relation(fields: [conversationId], references: [id])
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
+}
+
+model BlockedMessage {
+  id              String   @id @default(cuid())
+  originalContent String
+  reason          String
+  categories      String[]
+  senderId        String
+  conversationId  String
+  sender          User     @relation(fields: [senderId], references: [id])
+  createdAt       DateTime @default(now())
+
+  @@index([senderId, createdAt])
+}
